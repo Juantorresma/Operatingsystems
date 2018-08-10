@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class letraRepetida {
 
-	public void Repetido(String string) {
+	public void Repetido(String string, long inicio) {
 		int a=0;
 		char sub = Character.MIN_VALUE;
 		if(string.length()==1) {System.out.println("Solo hay una letra");}
@@ -17,6 +17,7 @@ public class letraRepetida {
 				}
 				if (a==1) {
 					System.out.println("La primer letra que no se repite es "+sub);
+					System.out.println("Time elapsed = "+ (System.currentTimeMillis()-inicio)+" miliseconds");
 					System.exit(0);
 				}
 			}
@@ -24,12 +25,13 @@ public class letraRepetida {
 		}
 	}
 	public static void main(String[] args) {
+		long inicio =System.currentTimeMillis();
 		Scanner leer = new Scanner(System.in);
 		System.out.println("Escribe la palabra que quieras checar");
 		String string= leer.next();
 		letraRepetida ejercicio = new letraRepetida();
-		ejercicio.Repetido(string);
+		ejercicio.Repetido(string,inicio);
 		leer.close();
-
+		System.out.println("Time elapsed = "+ (System.currentTimeMillis()-inicio)+" miliseconds");
 	}
 }
