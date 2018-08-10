@@ -1,1 +1,1 @@
-# Operatingsystems
+# letraRepetida is a program which goal is to tell whhich is the first letter unrepeated in the word. To run it you just need  to copy the code to eclipse or any other java compiler. I had no memory or CPU issues and its complexity is quadratic .O(n2).
